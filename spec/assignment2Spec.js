@@ -4,25 +4,25 @@ describe("Shoppingcart", () => {
         const cart = new Shoppingcart();
 
         const apple = {
-            upc: 1212,
+            price: 12,
             selfNumber: 1
 
         }
 
         const peach = {
-            upc: 2343,
+            price: 23,
             selfNumber: 2
         }
         const mango = {
-            upc: 5678,
+            price: 56,
             selfNumber: 4
         }
         const grapes  = {
-            upc: 4343,
+            price: 43,
             selfNumber: 7
         }
         const pineapple = {
-            upc: 4512,
+            price: 45,
             selfNumber: 8
         }
 
@@ -61,8 +61,8 @@ describe("Shoppingcart", () => {
 
     it("discount on items", function(){
         const cart = new Shoppingcart();
-        cart.scan("apple")
-        cart.scan("grape")
+        cart.scan("apple.price")
+        cart.scan("grape.price")
         cart.discount()
         expect(cart.fetch()).toBe("50% discount")
     })
