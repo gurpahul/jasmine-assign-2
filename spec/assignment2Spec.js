@@ -58,6 +58,14 @@ describe("Shoppingcart", () => {
         const cart = new Shoppingcart();
         expect(cart.fetch()).toBe("cart is empty")
     })
+
+    it("discount on items", function(){
+        const cart = new Shoppingcart();
+        cart.scan("apple")
+        cart.scan("grape")
+        cart.discount()
+        expect(cart.fetch()).toBe("50% discount")
+    })
   
 
 
