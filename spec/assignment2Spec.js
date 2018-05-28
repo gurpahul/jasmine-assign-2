@@ -58,6 +58,10 @@ describe("Shoppingcart", () => {
             price: 45,
             selfNumber: 8
         }
+        const jelly = {
+            price: 45,
+            selfNumber: 8
+        }
         cart.scan(apple)
         cart.scan(mango)
         cart.scan(peach)
@@ -94,7 +98,7 @@ describe("Shoppingcart", () => {
             selfNumber: 8
         }
         cart.scan(apple)
-        cart.scan(grape)
+        cart.scan(grapes)
         cart.remove()
         expect(cart.fetch()).toEqual([apple])
     })
@@ -129,7 +133,7 @@ describe("Shoppingcart", () => {
             selfNumber: 8
         }
         cart.scan(apple)
-        cart.scan(grape)
+        cart.scan(grapes)
         cart.discount()
         expect(cart.fetch()).toBe("50% discount")
     })
