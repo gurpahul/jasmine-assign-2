@@ -29,7 +29,7 @@ class Shoppingcart {
         return this.product
     }
     discount(){
-      this.product = 50 * this.product
+      this.product = 50 * this.product.price
     }
 
 }
